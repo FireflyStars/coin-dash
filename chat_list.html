@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat List</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Menu Area -->
+    <header>
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-lg">
+        <div class="container menu_bar">
+            
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button> 
+
+          <a class="navbar-brand mobile_center" href="#">
+              <img src="images/logo.png" alt="">
+          </a>           
+          <form class="d-flex search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          </form>
+
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0" id="menu">
+                  <li class="nav-item"><a href="#" class="nav-link active" aria-current="page"> <img src="images/paper_fly.png" alt=""> Explore</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link"><img src="images/envelope.png" alt=""> Messages</a></li>
+                  <li class="nav-item" data-bs-toggle="modal" data-bs-target="#link_modal"><a href="#" class="nav-link"><img src="images/linked.png" alt="">Linked</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link"><img src="images/people.png" alt="">Find a Freind</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link"><svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.71375 15.112C5.06545 15.112 3.41248 15.112 1.76418 15.1072C1.59608 15.1072 1.41864 15.0977 1.25521 15.0502C0.480093 14.8127 0.237284 13.8199 0.802282 13.2262C1.00307 13.0172 1.22253 12.8224 1.40464 12.5992C2.05368 11.8011 2.35719 10.8701 2.35719 9.83457C2.35719 9.27405 2.35252 8.70879 2.35719 8.14827C2.38521 5.9822 3.78136 4.24365 5.86392 3.79713C6.04136 3.75913 6.11607 3.68788 6.09739 3.49787C6.08338 3.34112 6.08805 3.17961 6.10206 3.02286C6.13474 2.68085 6.39156 2.43384 6.71842 2.43384C7.04528 2.43384 7.30676 2.67135 7.33945 3.01811C7.35346 3.17486 7.3628 3.33637 7.34412 3.49312C7.32077 3.69738 7.40482 3.76388 7.5916 3.80188C8.6749 4.02039 9.54808 4.59516 10.2111 5.48818C10.7995 6.27671 11.0796 7.17449 11.0796 8.16727C11.0796 8.69929 11.0843 9.22655 11.0796 9.75857C11.0703 11.1029 11.5419 12.2239 12.5318 13.1264C12.9988 13.5539 13.0828 14.162 12.7466 14.6417C12.5038 14.9885 12.1629 15.1167 11.7567 15.1167C10.6454 15.112 9.5294 15.1167 8.41808 15.1167C7.85309 15.112 7.28342 15.112 6.71375 15.112Z" fill="#978D91"/>
+<path d="M4.45374 15.7485C5.97597 15.7485 7.48421 15.7485 8.98777 15.7485C8.88037 16.727 7.8671 17.6106 6.82114 17.6391C5.66779 17.6723 4.64051 16.86 4.45374 15.7485Z" fill="#978D91"/>
+<path d="M12.1233 8.16292C14.3008 8.16292 16.0659 6.3474 16.0659 4.10784C16.0659 1.86828 14.3008 0.0527649 12.1233 0.0527649C9.94584 0.0527649 8.18066 1.86828 8.18066 4.10784C8.18066 6.3474 9.94584 8.16292 12.1233 8.16292Z" fill="#FF6060"/>
+</svg>
+Notifications</a></li>                    
+                  <li class="nav-item"><a href="#" class="nav-link"><img src="images/coin.png" alt="">Sneaky Coins</a></li>
+                  
+                  <li class="nav-item"><a href="#" class="nav-link mobile_only" data-bs-toggle="modal" data-bs-target="#room_modal"><img src="images/coin.png" alt="">Rooms</a></li>
+                  
+                  <li class="nav-item dropdown mobile_hidden">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="images/small_photo.png" alt="">
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Edit Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                      </ul>
+                  </li>
+              </ul>
+          </div>
+
+          <div class="mobile_only header_profile">
+              <a href="#"><img src="images/small_photo.png" alt=""></a>
+          </div>
+          
+        </div>
+      </nav>
+    </header>
+
+      
+      <!-- Chat Page -->
+
+      <div class="chat_area">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-12">
+                      <div class="chat_title">
+                          <h3>Chats</h3>
+                          <div class="chat_list">
+                              <ul>
+                                  <li>
+                                      <a href="#">
+                                          <img src="images/Mask.png" alt="">
+                                          <span class="chat_name">Joana Karg</span>
+                                          <span class="chat_text">Hey, are you coming to the event?</span>
+                                          <span class="chat_time">Right Now</span>
+                                      </a>
+                                    </li>
+                                    
+                                  <li>
+                                    <a href="#">
+                                        <img src="images/Mask.png" alt="">
+                                        <span class="chat_name">Lorem Kulia</span>
+                                        <span class="chat_text">Where are you? We are waiting.</span>
+                                        <span class="chat_time">30s ago</span>
+                                    </a>
+                                  </li>
+                                  
+                                  <li>
+                                    <a href="#">
+                                        <img src="images/Mask.png" alt="">
+                                        <span class="chat_name">Joana Karg</span>
+                                        <span class="chat_text">Hurry Up! The party is started.</span>
+                                        <span class="chat_time">2m ago</span>
+                                    </a>
+                                  </li>
+                                  
+                                  <li>
+                                    <a href="#">
+                                        <img src="images/Mask.png" alt="">
+                                        <span class="chat_name">Joana Karg</span>
+                                        <span class="chat_text">Hey, are you coming to the event?</span>
+                                        <span class="chat_time">3m ago</span>
+                                    </a>
+                                  </li>
+                                  
+                                  <li>
+                                    <a href="#">
+                                        <img src="images/Mask.png" alt="">
+                                        <span class="chat_name">Joana Karg</span>
+                                        <span class="chat_text">Hurry Up! The party is started.</span>
+                                        <span class="chat_time">4m ago</span>
+                                    </a>
+                                  </li>
+                                  
+                                  <li>
+                                    <a href="#">
+                                        <img src="images/Mask.png" alt="">
+                                        <span class="chat_name">Joana Karg</span>
+                                        <span class="chat_text">Hey, are you coming to the event?</span>
+                                        <span class="chat_time">6m ago</span>
+                                    </a>
+                                  </li>
+                                  
+                                  <li>
+                                    <a href="#">
+                                        <img src="images/Mask.png" alt="">
+                                        <span class="chat_name">Joana Karg</span>
+                                        <span class="chat_text">Hurry Up! The party is started.</span>
+                                        <span class="chat_time">10m ago</span>
+                                    </a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Scripts -->
+      <script type="text/javascript" src="js/jquery.min.js"></script>
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="js/custom.js"></script>
+</body>
+</html>
